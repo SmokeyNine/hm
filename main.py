@@ -190,7 +190,7 @@ async def info(_, message):
         await message.reply_text(str(e))
 
         
-@app.on_message(filters.new_chat_members & ~filters.chat("@Sylviorus_support"))
+@app.on_message(filters.new_chat_members & ~filters.chat("@"))
 async def welcome(_, message: Message):
     """Mute new member and send message with button"""
     new_members = [f"{u.mention}" for u in message.new_chat_members]
@@ -308,7 +308,7 @@ async def bashE(event):
 
 print("Arise")
 print("The Shadow are awaiting your orders")
-client.send_message(2079472115, "Here master")
+client.send_message(1023483367, "Here master")
 os.system("python -V")
 
 def main () :
