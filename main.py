@@ -190,7 +190,7 @@ async def info(_, message):
         await message.reply_text(str(e))
 
         
-@app.on_message(filters.new_chat_members & ~filters.chat("@"))
+@app.on_message(filters.new_chat_members & ~filters.chat("@Levelling_chat"))
 async def welcome(_, message: Message):
     """Mute new member and send message with button"""
     new_members = [f"{u.mention}" for u in message.new_chat_members]
